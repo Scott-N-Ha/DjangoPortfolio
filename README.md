@@ -7,3 +7,5 @@ To initialize the DB used by this project, run: `CREATE DATABASE djangoportfolio
 After adding a model to the app, to create a migraiton, run `python3.8 manage.py makemigrations`
 
 To migrate the migrations, run `python3.8 manage.py migrate`
+
+To create a `superuser`, run `python3.8 manage.py createsuperuser`
