@@ -4,4 +4,6 @@ To start the server, run: `python3.8 manage.py runserver`
 
 To initialize the DB used by this project, run: `CREATE DATABASE djangoportfolio` in PostgreSQL
 
-After adding a model to the app, run `python3.8 manage.py makemigrations`
+After adding a model to the app, to create a migraiton, run `python3.8 manage.py makemigrations`
+
+To migrate the migrations, run `python3.8 manage.py migrate`
