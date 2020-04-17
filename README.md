@@ -13,3 +13,5 @@ After adding a model to the app, to create a migraiton, run `python3.8 manage.py
 To migrate the migrations, run `python3.8 manage.py migrate`
 
 To create a `superuser`, run `python3.8 manage.py createsuperuser`
+
+To collect all static images/files, run `python3.8 manage.py collectstatic`
