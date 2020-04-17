@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 {% load static %}
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport"
@@ -15,8 +16,7 @@
     href="https://getbootstrap.com/docs/4.4/examples/album/">
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet"
-    href="{% static 'css/bootstrap.min.css'%}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
 
   <!-- Favicons -->
   <link rel="apple-touch-icon"
@@ -104,14 +104,17 @@
     <section class="jumbotron text-center">
       <div class="container">
         <h1>Django Portfolio - Scott Ha</h1>
-        <p class="lead text-muted">This is my test portfolio page for learning the Django Framework
+        <p class="lead text-muted">This is my test portfolio page for learning
+          the Django Framework
         </p>
         <p>
-          <a href="mailto:ha_scott@yahoo.com" class="btn btn-primary my-2">Email Me</a>
+          <a href="mailto:ha_scott@yahoo.com" class="btn btn-primary my-2">Email
+            Me</a>
           <!-- <a href="#" class="btn btn-secondary my-2">Secondary action</a> -->
         </p>
 
-        <img src="{% static 'little-girl-is-confused-gif.webp' %}" alt="" width="90%" height="auto">
+        <img src="{% static 'little-girl-is-confused-gif.webp' %}" alt=""
+          width="90%" height="auto">
 
       </div>
     </section>
@@ -123,32 +126,34 @@
           {% for job in jobs.all %}
 
           <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <!-- <svg class="bd-placeholder-img card-img-top" width="100%"
+            <a href="{% url 'detail' job.id %}">
+              <div class="card mb-4 shadow-sm">
+                <!-- <svg class="bd-placeholder-img card-img-top" width="100%"
                 height="225" xmlns="{{ job.image.url }}"
                 preserveAspectRatio="xMidYMid slice" focusable="false"
                 role="img" aria-label="Placeholder: Thumbnail"> -->
-              <img lass="bd-placeholder-img card-img-top" width="100%"
-              height="225" src="{{ job.image.url }}" alt="">
-              <!-- <title>Placeholder</title>
+                <img lass="bd-placeholder-img card-img-top" width="100%"
+                  height="225" src="{{ job.image.url }}" alt="">
+                <!-- <title>Placeholder</title>
                 <rect width="100%" height="100%" fill="#55595c" /><text x="50%"
                   y="50%" fill="#eceeef" dy=".3em">Thumbnail</text> -->
                 <!-- </svg> -->
-              <div class="card-body">
-                <p class="card-text">{{ job.summary }}.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <!-- <div class="btn-group">
+                <div class="card-body">
+                  <p class="card-text">{{ job.summary }}.</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center">
+                    <!-- <div class="btn-group">
                     <button type="button"
                       class="btn btn-sm btn-outline-secondary">View</button>
                     <button type="button"
                       class="btn btn-sm btn-outline-secondary">Edit</button>
                   </div> -->
-                  <!-- <small class="text-muted">9 mins</small> -->
+                    <!-- <small class="text-muted">9 mins</small> -->
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
-
           {% endfor %}
         </div>
       </div>
@@ -170,10 +175,8 @@
     </div>
   </footer> -->
   <script src="{% static 'jquery-3.5.0.min.js' %}"></script>
-  <script
-    src="{% static 'popper.min.js' %}"></script>
-  <script
-    src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
 </body>
 
 </html>
